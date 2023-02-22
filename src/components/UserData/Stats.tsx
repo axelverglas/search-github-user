@@ -12,7 +12,7 @@ interface DataProps {
 const Data = ({ value, name }: DataProps) => {
     return (
         <li className="flex flex-col items-center justify-center md:items-start">
-            <span className="text-[1.3rem] text-center dark:text-white md:text-2xl">{name}</span>
+            <span className="text-[1.3rem] text-center dark:text-white text-gray-special-2 md:text-2xl">{name}</span>
             <strong className="text-bold text-[1.8rem] mt-[0.8rem] dark:text-white md:mt-4 md:text-[2.4rem]">{value}</strong>
         </li>
     )
