@@ -93,9 +93,6 @@ export default function TopArea({ setUser }: TopAreaProps) {
 
         <input ref={usernameRef} type="text" name="username" id="username" className="flex-1 dark:text-white text-[1.4rem] border-none my-0 mx-3 md:text-[1.7rem] md:mx-10 bg-inherit focus:outline-dashed focus:outline-1 focus:outline-blue-special leading-[192%]" placeholder="Rechercher un utilisateur..." />
 
-        {empty && <div className="font-bold text-2xl text-red-600 mr-10">Entrer un utilisateur</div>}
-        {notFound && <div className="font-bold text-2xl text-red-600 mr-10">Aucun utilisateur trouvé</div>}
-
         <button
           type="submit"
           className="bg-blue-special border-none h-full w-40 rounded-2xl font-bold text-white text-2xl cursor-pointer transition ease-out hover:filter hover:brightness-105 hover:shadow-special md:w-44 md:text-[1.7rem]"
@@ -103,7 +100,8 @@ export default function TopArea({ setUser }: TopAreaProps) {
           Rechercher
         </button>
       </form>
-
+      {empty && <div className="font-bold text-2xl text-red-600 mt-8">Entrer un utilisateur</div>}
+      {notFound && <div className="font-bold text-2xl text-red-600 mt-8">Aucun utilisateur trouvé</div>}
 
     </div>
   );
